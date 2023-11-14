@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="./images/pizza.png">
+        <link rel="stylesheet" href="./style/estilos.css">
+        <script src="libs/jquery-3.7.1.min.js"></script>
+        <title>Pizza House</title>
+    </head>
+    <body>
+
+        <div class="logo_titulo">
+            <img alt="logo" src="./images/pizza.png">
+            <h1>Pizza House</h1>
+        </div>
+
+        <div class="titulos">
+            <h2>Datos del cliente</h2>
+            <h2>Datos del pedido</h2>
+        </div>
+        
+        <form action="http://127.0.0.1:5000/pizza" id="form" method="post">
+            <div class="flex">
+                <div class="cliente">
+                    <div class="flex">
+                        <label class="cliente" id="lableNombre" for="nombre">Nombre :</label>
+                        <input class="cliente" onclick="setLableToDefault('lableNombre')" type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="flex">
+                        <label class="cliente" id="lableApellidos" for="apellidos">Apellidos :</label>
+                        <input class="cliente" onclick="setLableToDefault('lableApellidos')"  type="text" id="apellidos" name="apellidos">
+                    </div>
+                    <div class="flex">
+                        <label class="cliente" for="fecha-nacimiento">Fecha de Nacimiento :</label>
+                        <input class="cliente" type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                    </div>
+                    <div class="flex">
+                        <label class="cliente"  for="numero-telefono">Numero telefono :</label>
+                        <input class="cliente" type="number" id="numero-telefono" name="numero-telefono">
+                    </div>
+                    <div class="flex">
+                        <label class="cliente" for="direccion-cliente">Dirección :</label>
+                        <input class="cliente" type="text" id="direccion-cliente" name="direccion-cliente">
+                    </div>
+                </div>
+
+                <div class="pedido">
+                    <div class="pedido_right">
+                        <a>Elija el tamaño :</a>
+                        <a>Elija los ingredientes :</a>
+                    </div>
+                    <div class="pedido_left">
+                        <select name="tamaño-pizza">
+                            <option value="pequeña" selected>Pequeña</option>
+                            <option value="mediana">Mediana</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                        <div>
+                            <input type="checkbox" id="jamon-york" name="jamon" value="Jamón York">
+                            <label for="jamon-york"> Jamón York </label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="champiñones" name="champi" value="Champiñones">
+                            <label for="champiñones"> Champiñones </label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pepperoni" name="pepperoni" value="Pepperoni">
+                            <label for="pepperoni"> Pepperoni </label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="aceitunas" name="aceitunas" value="Aceitunas">
+                            <label for="aceitunas"> Aceitunas </label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="reset">Limpiar formulario</button>
+            <button type="submit" id="submit" >Confirmar pedido</button>
+        </form>
+    </body>
+</html>
+<!--script src="./js/script.js"></!--script-->
+<script src="./js/scriptJquery.js"></script>
