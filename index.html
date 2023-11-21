@@ -50,12 +50,15 @@
                         <a>Elija los ingredientes :</a>
                     </div>
                     <div class="pedido_left">
-                        <select name="tamaño-pizza">
-                            <option value="pequeña" selected>Pequeña</option>
-                            <option value="mediana">Mediana</option>
-                            <option value="grande">Grande</option>
-                            <option value="XXL">Grande</option>
-                        </select>
+                        <div>
+                            <select name="size" id="size" >
+                                <option value="S" selected>Pequeña</option>
+                                <option value="M">Mediana</option>
+                                <option value="L">Grande</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                            <span id="response_size"></span>
+                        </div>
                         <div>
                             <input type="checkbox" id="jamon-york" name="jamon" value="Jamón York">
                             <label for="jamon-york"> Jamón York </label><br>
