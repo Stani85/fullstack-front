@@ -33,4 +33,20 @@ $(function(){
         }
     });
 
+    $("#size").change(function(event){
+        console.log(this.value);
+        $.post("http://127.0.0.1:5000/checksize",
+            {
+              size: this.value
+            },
+            function(data,status){
+              $("#response_size").text(data);
+              if(data === "No disponible"){
+                $("#submit").attr("disabled", "disabled")
+              }else{
+                $("#submit").removeAttr("disabled");
+              }
+        });
+    });
+
 });
